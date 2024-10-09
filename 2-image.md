@@ -4,6 +4,7 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
+
 # COMPLETAR 
 
 ![Imagen y contenedores](img/imagenContenedores.JPG)
@@ -24,12 +25,19 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
+```
+docker pull hello-world
+```
 # COMPLETAR
 
 **¿Qué es nginx**
 # COMPLETAR 
 
 Descargar la imagen  **nginx** en la versión **alpine**
+
+```
+docker pull nginx:alpine
+```
 # COMPLETAR
 
 ### Listar imágenes
@@ -38,6 +46,7 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
+![Docker Images](img/dockerImages.PNG)
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
 **Identificadores**
@@ -53,6 +62,9 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
+```
+docker inspect hello-world
+```
 # COMPLETAR
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
@@ -73,6 +85,10 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
+
+```
+docker rmi hello-world
+```
 # COMPLETAR
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
