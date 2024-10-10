@@ -10,7 +10,6 @@ Crear el contenedor  **srv-web** usando la imagen nginx version alpine
 ```
 docker create --name srv-web nginx:alpine
 ```
-# COMPLETAR
 
 Si creas un contenedor en Docker sin asignarle un nombre específico utilizando la opción --name, Docker asignará automáticamente un nombre aleatorio al contenedor. Este nombre suele consistir en una combinación de palabras y números.  
 
@@ -18,7 +17,6 @@ Crear el contenedor usando la imagen hello-world
 ```
 docker create hello-world
 ```
-# COMPLETAR
 
 ### Listar los contenedores ejecutándose o no
 
@@ -35,8 +33,6 @@ Iniciar el contenedor srv-web
 ```
 docker start srv-web
 ```
-
-# COMPLETAR
 
 ### Listar los contenedores ejecutándose
 ```
@@ -62,11 +58,14 @@ Crear y ejecutar inmediatamente el contenedor **srv-web2** usando la imagen ngin
 ```
 docker run --name srv-web2 nginx:alpine
 ```
-# COMPLETAR
 
 **¿Qué sucede luego de la ejecución del comando?**
-# COMPLETAR  
 
+ Docker descarga la imagen de Nginx si no está localmente, crea un contenedor llamado srv-web2 y lo ejecuta en primer plano, mostrando los logs de Nginx en la terminal. El terminal no regresa al prompt hasta que el proceso de Nginx termine.
+ 
+ El servidor Nginx inicia dentro del contenedor, pero no será accesible desde fuera a menos que se mapeen los puertos.
+
+---
 Cuando ejecutas un contenedor en primer plano sin la opción -d (modo detach), el contenedor captura la entrada estándar (stdin) del terminal, lo que significa que el terminal queda "atrapado" y no puedes introducir más comandos hasta que detengas el contenedor.
 
 ### Para crear un contenedor y ejecutarlo inmediatamente sin estar vinculados al mismo
@@ -81,7 +80,6 @@ Crear y ejecutar inmediatamente el contenedor **srv-web3** en modo detach usando
 ```
 docker run -d --name srv-web3 nginx:alpine
 ```
-# COMPLETAR
 
 ### Para eliminar un contenedor
 
@@ -92,14 +90,12 @@ Eliminar el contenedor que se creó a partir de la imagen hello-world
 ```
 docker rm strange_bassi
 ```
-# COMPLETAR
 
 Verificar que el contenedor que se eliminó
 
 ```
 docker ps -a
 ```
-# COMPLETAR
 
 ### Para eliminar un contenedor que esté ejecutándose
 
@@ -110,13 +106,11 @@ Eliminar el contenedor **srv-web3**
 ```
 docker rm -f srv-web3
 ```
-# COMPLETAR
 
 Verificar que el contenedor que se eliminó
 ```
 docker ps -a
 ```
-# COMPLETAR
 
 ### Para inspecionar un contenedor 
 
@@ -124,4 +118,3 @@ Inspeccionar el contenedor **srv-web**
 ```
 docker inspect srv-web
 ```
-# COMPLETAR
